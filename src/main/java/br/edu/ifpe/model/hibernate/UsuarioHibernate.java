@@ -50,7 +50,7 @@ public class UsuarioHibernate implements UsuarioDao {
         return instance;
     }
 
-    private UsuarioHibernate() {
+    public UsuarioHibernate() {
         Configuration cfg = new Configuration().configure();
         this.SESSIONS = cfg.buildSessionFactory();
         this.LOGGER = Logger.getLogger(UsuarioHibernate.class);

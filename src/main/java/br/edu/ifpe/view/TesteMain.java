@@ -122,5 +122,24 @@ public class TesteMain {
        UsuarioController uc = new UsuarioController();
        String us = uc.realizarLogin("4", "4");
        System.out.println(us);*/
+   
+    
+        UsuarioHibernate uh =new UsuarioHibernate();
+        
+        Usuario user = uh.recuperar("04343424405");
+    
+        ArrayList<Bike> bikes = new ArrayList<>();
+        Bike bike = new Bike("BMX", new BigDecimal("150"), "Adulto", "Rosa", user);
+        bikes.add(bike);
+        user.setBikes(bikes);
+        uh.alterar(user);
+    
+    
+    
+    
+    
+    
+    
+    
     }
 }
